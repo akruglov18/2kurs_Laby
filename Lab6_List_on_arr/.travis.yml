@@ -1,0 +1,13 @@
+language: cpp
+compiler:
+  - gcc
+  - clang
+before_script:
+  - mkdir ../build
+  - cd ../build
+script:
+  - cmake ../Lab6_List_on_arr
+  - make -j
+  - ./test/ListTest
+notifications:
+  email: false

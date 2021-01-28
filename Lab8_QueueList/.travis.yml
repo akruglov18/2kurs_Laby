@@ -1,0 +1,13 @@
+language: cpp
+compiler:
+  - gcc
+  - clang
+before_script:
+  - mkdir ../build
+  - cd ../build
+script:
+  - cmake ../Lab8_QueueList
+  - make -j
+  - ./test/QueueTest
+notifications:
+  email: false

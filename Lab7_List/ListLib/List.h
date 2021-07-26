@@ -160,10 +160,8 @@ inline TList<T>::TList(const TList<T>& list)
   _end = 0;
   count = 0;
   TListElem<T>* i = list._root;
-  TListElem<T>* j;
   while (i != 0) {
-    j = new TListElem<T>(*i);
-    this->insLast(j->getData());
+    this->insLast(i->getData());
     i = i->getNext();
   }
   count = list.count;
